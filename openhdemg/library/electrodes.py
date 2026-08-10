@@ -161,6 +161,11 @@ def sort_rawemg(
         GR08MM1305              (0, 180)
         GR04MM1305              (0, 180)
         GR10MM0808              (0, 180)
+        HD10MM0808              (0, 180)
+        HD04MM1305              (0, 180)
+        HD08MM1305              (0, 180)
+        HD10MM0804              (0, 180)
+        HD05MM0804              (0, 180)
         Trigno Galileo Sensor   (na)
         Custom order            (na)
 
@@ -176,6 +181,16 @@ def sort_rawemg(
         ``GR04MM1305``
 
         ``GR10MM0808``
+
+        ``HD10MM0808``
+
+        ``HD04MM1305``
+
+        ``HD08MM1305``
+
+        ``HD10MM0804``
+
+        ``HD05MM0804``
 
         ``Trigno Galileo Sensor``
 
@@ -338,6 +353,7 @@ def sort_rawemg(
         "GR08MM1305",
         "GR04MM1305",
         "GR10MM0808",
+        "HD10MM0808",
         "HD04MM1305",
         "HD08MM1305",
         "HD10MM0804",
@@ -427,7 +443,7 @@ def sort_rawemg(
                 [51,     52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63],
             ]
 
-    elif code == ["GR10MM0808","HD10MM0808"]:
+    elif code in ["GR10MM0808", "HD10MM0808"]:
         if orientation == 0:
             """
             Channel Order GR10MM0808
