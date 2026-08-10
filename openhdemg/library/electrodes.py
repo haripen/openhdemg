@@ -160,6 +160,7 @@ def sort_rawemg(
         Code                    (Orientation)
         GR08MM1305              (0, 180)
         GR04MM1305              (0, 180)
+        GR10MM0804              (0, 180)
         GR10MM0808              (0, 180)
         HD10MM0808              (0, 180)
         HD04MM1305              (0, 180)
@@ -179,6 +180,8 @@ def sort_rawemg(
         ``GR08MM1305``
 
         ``GR04MM1305``
+
+        ``GR10MM0804``
 
         ``GR10MM0808``
 
@@ -352,6 +355,7 @@ def sort_rawemg(
     valid_codes = [
         "GR08MM1305",
         "GR04MM1305",
+        "GR10MM0804",
         "GR10MM0808",
         "HD10MM0808",
         "HD04MM1305",
@@ -525,10 +529,10 @@ def sort_rawemg(
                 [    12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24],
                 [np.nan,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9, 10, 11],
                 ]
-    elif code in ["HD05MM0804","HD10MM0804"]:
+    elif code in ["GR10MM0804", "HD05MM0804", "HD10MM0804"]:
         if orientation == 0:
             """
-            Channel Order HD05MM0804 and HD10MM0804
+            Channel Order GR10MM0804, HD05MM0804 and HD10MM0804
                 0   1   2   3
             0  32  24  16   8
             1  31  23  15   7
